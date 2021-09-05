@@ -2,4 +2,4 @@
 Sequrity of Operation Systems Repo
 
 # Labs
-  - Lab1
+  - [Lab1](https://github.com/ullibniss/SoOS-2021-2022/tree/master/labs/lab1)
