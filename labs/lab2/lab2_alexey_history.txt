@@ -1,0 +1,55 @@
+    1  history
+    2  clear
+    3  mkdir test
+    4  cd test
+    5  touch file
+    6  ls -lA
+    7  chmod 000 file
+    8  echo test > file
+    9  chmod 100 file
+   10  ls -lA
+   11  chmod file 300 file
+   12  chmod 300 file
+   13  ls -lA
+   14  chmod 200 file
+   15  ls
+   16  ls -lA
+   17  echo test > file
+   18  cat file 
+   19  chmod 240 file 
+   20  ls -lA
+   21  cat file 
+   22  chmod 640 file 
+   23  ls
+   24  ls -lA
+   25  cat file 
+   26  mkdir dir
+   27  cd dir
+   28  touch new_file
+   29  echo file2 > new_file 
+   30  ls 
+   31  cd ..
+   32  chmod 666 dir
+   33  cd dir
+   34  ls dir
+   35  rm dir/new_file 
+   36  chown root dir
+   37  chgrp root dir/
+   38  umask 0022
+   39  touch file
+   40  ls -lA
+   41  rm file 
+   42  umask 0066
+   43  touch file
+   44  ls -lA
+   45  umask 0000
+   46  rm file 
+   47  touch file
+   48  ls -lA
+   49  sudo su
+   50  cat file
+   51  sudo su
+   52  cat file 
+   53  cd ..
+   54  history
+   55  history > lab2_alexey_history.txt
