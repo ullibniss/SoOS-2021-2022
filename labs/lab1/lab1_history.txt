@@ -1,0 +1,138 @@
+    1  passwd
+    2  sudo su
+    3  ed
+    4  exit
+    5  sudo useradd jenkins -p 12345
+    6  exit
+    7  ip a
+    8  sudo usermod -G -a sudoers alexey
+    9  exit
+   10  sudo
+   11  sudo apt
+   12  sudo useradd jenkins -p 12345
+   13  sudo su jenkins 
+   14  sudo usermod -G wheels jenkins
+   15  sudo usermod -G wheel jenkins
+   16  exit
+   17  clear
+   18  whoami
+   19  whoaim
+   20  whoami
+   21  echo "Hello world"
+   22  date
+   23  cal
+   24  man cal
+   25  cal -3
+   26  history
+   27  clear
+   28  pwd
+   29  cd /
+   30  cd ..
+   31  pwd
+   32  ls
+   33  ls /var
+   34  cd ~
+   35  cd ..
+   36  pwd
+   37  ls -lA
+   38  cd
+   39  mkdir fruits
+   40  cd /
+   41  cd ~/animals
+   42  touch /tmp/temp
+   43  cd ~/fruits/
+   44  touch apple pineapple lion 
+   45  mkdir ../animals
+   46  touch banana
+   47  ls
+   48  cd ../animals/{cat, dog, elephant}.txt
+   49  touch ../animals/{cat, dog, elephant}.txt
+   50  ls -lA apple 
+   51  ls b*
+   52  ls [bi]*
+   53  ls b* i*
+   54  cp /etc/passwd ~
+   55  cd ..
+   56  cat /etc/issue
+   57  cp /etc/issue ~/fruits/apple~
+   58  cd fruits/
+   59  cat apple
+   60  cp /etc/issue ~/fruits/apple
+   61  cat apple
+   62  rm apple~
+   63  clear
+   64  mv lion ../animals/
+   65  mv pineapple pineapple_correct
+   66  cd ..
+   67  ls
+   68  cat passwd | wc -l
+   69  ln passwd_link /etc/passwd
+   70  ln -s /etc/passwd passwd_link
+   71  ln .bash_history history_hard
+   72  ls -lA
+   73  ls -l .bash_history 
+   74  ls -l
+   75  rm fruits/apple 
+   76  mkdir rmme
+   77  rmdir rmme/
+   78  cd ..
+   79  cd alexey/
+   80  rm -rf fruits/
+   81  cp /etc/init.d/ ~
+   82  cp -r /etc/init.d/ ~
+   83  rm -rf init.d/
+   84  cut -d: -fl /etc/passwd | sort
+   85  cut -d -fl /etc/passwd | sort
+   86  cut -fl /etc/passwd | sort
+   87  vim passwd
+   88  cut -d: -f1 /etc/passwd | sort
+   89  cut -d: -f1,3 /etc/passwd | sort
+   90  cat /etc/passwd | grep /bin/bash | wc -l
+   91  cat /etc/passwd | grep /bin/bash | sort -r
+   92  cat /etc/passwd | grep /bin/bash | cut -d: -f1 | sort -r
+   93  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 | head -n 25
+   94  rpm -ql man-db | xargs -l du    2> /dev/null  | sort -n
+   95  top
+   96  clear
+   97  top -b -n1 | sort -k11
+   98  top -b -n1 | sort -k12
+   99  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f11,5
+  100  cat /etc/passwd | tr ":" " "
+  101  cat /etc/passwd | cut -d: -f1,7 | sort -k1
+  102  yum install git
+  103  sudo yum install git
+  104  cd /usr/share/doc/git/
+  105  ls
+  106  cat user-manual.txt 
+  107  clear
+  108  cat user-manual.txt | tr ' ' '\012'
+  109  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]'
+  110  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]'
+  111  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' |
+  112  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]'
+  113  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c
+  114  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+  115  cat user-manual.txt | tr -cs '[:alpha:]' '\n' |
+  116  cat user-manual.txt | tr -cs '[:alpha:]' '\n'
+  117  tr '[:lower:]' '[:upper:]' < user-manual.txt |  tr -d '[:punct:] \n\t'
+  118  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c
+  119  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+  120  tr '[:lower:]' '[:upper:]' < user-manual.txt |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+  121  tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep -E ........ | sort | uniq -c | sort -rn | head
+  122  ping ya.ru
+  123  curl wttr.in
+  124  hostname -I
+  125  curl ifconfig.me
+  126  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+  127  cd ~
+  128  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+  129  less README-ru.md 
+  130  id
+  131  whoami
+  132  exit
+  133  sudo id
+  134  id
+  135  sudo less /var/log/messages
+  136  less /var/log/messages
+  137  sudo su
+  138  history > lab1_history.txt
