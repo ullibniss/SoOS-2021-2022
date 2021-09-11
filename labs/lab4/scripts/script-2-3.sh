@@ -2,7 +2,7 @@
 
 od bash.txt | grep 000000 > /tmp/zeros
 od bash.txt | grep -v 000000 > /tmp/nonzeros
-
+ 
 echo "-----Zero-----"
 head -10 /tmp/zeros
 echo "--------------"
