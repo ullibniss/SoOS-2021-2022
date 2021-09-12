@@ -13,3 +13,16 @@
    - [1.9](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-1-9.sh)
    - [1.10](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-1-10.sh)
    - [1.11](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-1-11.sh)
+- 2.X
+   - [2.1](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-2-1.sh)
+   - [2.2](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-2-2.sh)
+   - [2.3](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-2-3.sh)
+   - [2.4](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-2-4.sh)
+   - [2.5](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-2-5.sh)
+- 3.X
+   - [3.1](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-3-1.sh)
+   - [3.2](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-3-2.sh)
+   - [3.3](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-3-3.sh)
+   - [3.4](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-3-4.sh)
+   - [3.5](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-3-5.sh)
+   - [3.6](https://github.com/ullibniss/soos-2021-2022/blob/master/labs/lab4/scripts/script-3-6.sh)
