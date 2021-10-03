@@ -10,4 +10,4 @@
 #script-2-1.sh
 
 echo "---------------"
-less /tmp/run.log
+less /tmp/run.log 
