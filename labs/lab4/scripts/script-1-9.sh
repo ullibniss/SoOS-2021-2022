@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ps aux | sort -rk4 | head -6
+ps aux | sort -rk4 | head -6 
