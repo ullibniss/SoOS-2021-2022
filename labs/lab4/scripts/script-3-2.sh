@@ -6,3 +6,4 @@ for i in $@
 do
 	echocount i
 done
+ 
