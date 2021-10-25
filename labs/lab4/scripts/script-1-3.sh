@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo $(export) | tr ":" "\n" | sort
+echo $(env) | tr ":" "\n" | sort
