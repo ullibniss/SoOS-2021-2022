@@ -9,3 +9,5 @@ Operation Systems Security Repo
   - [Lab3](https://github.com/ullibniss/SoOS-2021-2022/tree/master/labs/lab3)
   - [Lab4](https://github.com/ullibniss/soos-2021-2022/tree/master/labs/lab4)
   - [Lab5](https://github.com/ullibniss/soos-2021-2022/tree/master/labs/lab5)
+  - [Lab6](https://github.com/ullibniss/soos-2021-2022/tree/master/labs/lab6)
+  - [Lab7](https://github.com/ullibniss/soos-2021-2022/tree/master/labs/lab7)
