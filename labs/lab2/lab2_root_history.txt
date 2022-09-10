@@ -1,0 +1,20 @@
+   48  whoami
+   49  exit
+   50  chown root file
+   51  ls -lAA
+   52  chmod 600
+   53  chmod 600 file
+   54  ls -lA
+   55  cd ..
+   56  history > lab2_root_history.txt
+   57  exit
+   58  12345
+   59  chmod 640 file
+   60  cd ..
+   61  history
+   62  history | tail -n 11 > lab2_root_history.txt 
+   63  cat lab2_root_history.txt 
+   64  history | tail -n 13 > lab2_root_history.txt 
+   65  cat lab2_root_history.txt 
+   66  history | tail -n 120 > lab2_root_history.txt 
+   67  history | tail -n 20 > lab2_root_history.txt 
