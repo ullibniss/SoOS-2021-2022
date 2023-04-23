@@ -41,6 +41,23 @@ function clear_with_hat()
     echo "Controls:"$'\n'"$(column -s ':' -t < <(printf "%s\n" "$CONTROLS"))" | prSection 3
 }
 
+function column_menu()
+{
+    COLUMN_MENU_COUNTER=0
+    COLUMN_MENU_NUMLIST=""
+    for i in $COLUMN_MENU_LIST; do
+        echo $(( COLUMN_MENU_COUNTER++ )) &> /dev/null
+        COLUMN_MENU_NUMLIST="$COLUMN_MENU_NUMLIST"$'\n'"${COLUMN_MENU_COUNTER})${i}"
+    done
+
+    column -s " " < <(echo "$COLUMN_MENU_NUMLIST") | prSection $(( $(echo "$COLUMN_MENU_LIST" | wc -l) / 3 + 1)) 
+
+    echo -n "$COLUMN_MENU_CHOOSE_PHRASE" 
+    read column_menu_choose
+    echo -n "" | prSection 1 
+    COLUMN_MENU_CHOOSE=$(echo "$COLUMN_MENU_LIST" | head -$column_menu_choose | tail -n 1 )
+}
+
 function loop_menu() 
 {
     MAIN_MENU_COUNTER=2
