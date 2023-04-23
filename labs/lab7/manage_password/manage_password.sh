@@ -10,7 +10,8 @@ MAIN_MENU='
 
 run_chosen_script() {
     case "$MAIN_MENU_COUNTER" in
-        2) bash manage_user/add_user.sh;;
+        2) bash manage_password/block_unblock_user.sh;;
+        3) bash manage_password/change_password.sh;;
     esac
 }
 
