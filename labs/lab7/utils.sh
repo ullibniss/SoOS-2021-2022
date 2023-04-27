@@ -10,6 +10,8 @@ RMUL=$(tput rmul)
 COLUMNS=$(tput cols)
 printf -v DASHES '%*s' $COLUMNS '-'
 DASHES=${DASHES// /-}
+printf -v PLUSES '%*s' $COLUMNS '+'
+PLUSES=${PLUSES// /+}
 CONTROLS='K - UP : J - DOWN
 Q - BACK/QUIT : ENTER - CHOOSE'
 
@@ -23,13 +25,14 @@ getkey() {
 
 function prSection() 
 {
+    if [ -z ${FILL} ]; then FILL=$DASHES; fi
     local -i i
     for ((i=0; i < ${1:-5}; i++))
     do
         read aline
         printf '%s%s\n' "$aline" "${ERAS2EOL}"
     done
-    printf '%s%s\n%s' "$DASHES" "${ERAS2EOL}" "${ERAS2EOL}"
+    printf '%s%s\n%s' "$FILL" "${ERAS2EOL}" "${ERAS2EOL}"
 }
 
 function clear_with_hat() 
@@ -63,10 +66,11 @@ function column_menu()
 
 function loop_menu() 
 {
+    [ -z ${CLEAR_FUNCTION} ] && CLEAR_FUNCTION=clear_with_hat
     MAIN_MENU_COUNTER=2
     MAIN_MENU_LINES=$(echo "$MAIN_MENU" | wc -l)
     while true; do
-        clear_with_hat
+        eval ${CLEAR_FUNCTION}
         LOOP_COUNTER=0
         while read -r i ; do
             echo $(( LOOP_COUNTER++ )) &>/dev/null
@@ -80,11 +84,10 @@ function loop_menu()
         getkey
         [[ $keypress == "j" ]] && echo $(( MAIN_MENU_COUNTER++ )) &>/dev/null
         [[ $keypress == "k" ]] && echo $(( MAIN_MENU_COUNTER-- )) &>/dev/null
-        [[ $keypress == "" ]] && run_chosen_script
+        [[ $keypress == "" ]] && run_chosen_script; if (( $BREAK == 1 )); then break; fi;
         if [[ $keypress == "q" ]]; then clear; exit 0; fi
         (( $MAIN_MENU_COUNTER > $MAIN_MENU_LINES - 1 )) && echo $(( MAIN_MENU_COUNTER = 2 )) &> /dev/null
         (( $MAIN_MENU_COUNTER < 2 )) && echo $(( MAIN_MENU_COUNTER = $MAIN_MENU_LINES - 1 )) &> /dev/null
-        echo $keypress 
     done
 }
 

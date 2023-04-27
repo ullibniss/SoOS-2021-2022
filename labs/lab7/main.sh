@@ -28,6 +28,7 @@ run_chosen_script() {
         3) bash manage_password/manage_password.sh;;
         4) bash manage_group/manage_group.sh;;
         5) bash user_and_group_search/user_and_group_search.sh;; 
+        6) bash manage_files_and_dirs_security/manage_files_and_dirs_security.sh;; 
     esac
 }
 
