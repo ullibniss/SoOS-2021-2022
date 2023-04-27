@@ -12,7 +12,10 @@ MAIN_MENU='
 
 run_chosen_script() {
     case "$MAIN_MENU_COUNTER" in
-        2) bash manage_user/add_user.sh;;
+        2) bash manage_group/group_ls.sh;;
+        3) bash manage_group/groupadd.sh;;
+        4) bash manage_group/groupdel.sh;;
+        5) bash manage_group/group_change.sh;;
     esac
 }
 
